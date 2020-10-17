@@ -17,9 +17,9 @@ jobs:
         with:
           node-versions: $ {{ matrix.node }}
       - name: Get NPM cache directory
-          id: npm-cache
-          run:
-            echo "::set-output name=dir::$(npm config get cache)"
+        id: npm-cache
+        run: |
+          echo "::set-output name=dir::$(npm config get cache)"
       - name: Cache NPM
         uses: actions/cache@v1.1.0
         with:
@@ -42,9 +42,9 @@ jobs:
         with:
           node-version: 12.x
       - name: Get NPM cache directory
-          id: npm-cache
-          run:
-            echo "::set-output name=dir::$(npm config get cache)"
+        id: npm-cache
+        run: |
+          echo "::set-output name=dir::$(npm config get cache)"
       - name: Cache NPM
         uses: actions/cache@v1.1.0
         with:
