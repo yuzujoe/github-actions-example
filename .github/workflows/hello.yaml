@@ -1,9 +1,10 @@
-name: Hello, World!
+name: Run Hello Action
 on: push
 
 jobs:
-  build:
-    name: Greeting
+  hello:
+    name: Hello
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello, World!"
+      - name: Hello
+        uses: github-actions-up-and-running/hello-action@v1.0.0
