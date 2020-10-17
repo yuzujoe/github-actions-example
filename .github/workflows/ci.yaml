@@ -4,7 +4,7 @@ on: push
 jobs:
   unit-test:
     name: Unit Test
-    runs-on: utuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2.0.0
@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/chackout@v2.0.0
+        uses: actions/checkout@v2.0.0
       - name: Set Node.js 12.x
         uses: actions/setup-node@v1.3.0
         with:
